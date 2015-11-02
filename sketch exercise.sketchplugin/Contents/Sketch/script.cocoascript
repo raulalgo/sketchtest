@@ -1,4 +1,15 @@
 var onRun = function(context) {
 	var doc = context.document
-	[doc showMessage:"Entorno de trabajo"]
+	var selection = context.selection
+
+	if(selection.count() == 0) {
+		[doc showMessage:"Nothing is selected"]
+	}
+	else {
+		var q = selection.count()
+		[doc showMessage: q + " elements selected"]
+	}
+
+
+	//[doc showMessage:"v. 0.1"] //esto de momento es manual. Cogerlo del manifest.json en el futuro
 };

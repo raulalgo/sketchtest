@@ -1,5 +1,5 @@
 {
-  "author" : "",
+  "author" : "Raul Alvarez",
   "commands" : [
     {
       "script" : "script.cocoascript",
@@ -16,8 +16,8 @@
     "title" : "sketch exercise"
   },
   "identifier" : "com.example.sketch.4d60a38d-9fed-45a6-b733-45249e156b94",
-  "version" : "1.0",
-  "description" : "",
-  "authorEmail" : "",
-  "name" : "sketch exercise"
+  "version" : "0.1",
+  "description" : "Set of examples in my attempt to learn how to write Sketch Plugins",
+  "authorEmail" : "raulalgo@gmail.com",
+  "name" : "Sketch Exercises"
 }
