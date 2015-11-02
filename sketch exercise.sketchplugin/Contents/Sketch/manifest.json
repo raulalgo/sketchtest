@@ -1,0 +1,23 @@
+{
+  "author" : "",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "sketch exercise",
+      "identifier" : "sketch exercise"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "sketch exercise"
+    ],
+    "title" : "sketch exercise"
+  },
+  "identifier" : "com.example.sketch.4d60a38d-9fed-45a6-b733-45249e156b94",
+  "version" : "1.0",
+  "description" : "",
+  "authorEmail" : "",
+  "name" : "sketch exercise"
+}
