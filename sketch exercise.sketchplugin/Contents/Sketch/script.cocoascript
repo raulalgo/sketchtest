@@ -1,15 +1,44 @@
 var onRun = function(context) {
+	var app = [NSApplication sharedApplication]
 	var doc = context.document
 	var selection = context.selection
 
 	if(selection.count() == 0) {
-		[doc showMessage:"Nothing is selected"]
+		[doc showMessage:"Please select something to convert"]
 	}
 	else {
 		var q = selection.count()
-		[doc showMessage: q + " elements selected"]
+		if (selection.count()>1)	
+			[doc showMessage:"Let's go one by one first"]
+		else {
+			// Identify which kind of layer has been selected
+			var layer = selection.firstObject();
+			if(layer && layer.isKindOfClass(MSShapeGroup)) {
+				var shape = layer.layers().firstObject();
+				if (shape && shape.isKindOfClass(MSRectangleShape)){
+					var shapeFrame = [shape frame]
+					var layerStyle = [layer style]
+					var layerFill = [layerStyle fills]
+					var shapeWidth = [shapeFrame width]
+					var shapeHeight = [shapeFrame height]
+					
+					[app displayDialog:shapeWidth withTitle:"Width"]
+					[app displayDialog:shapeHeight withTitle:"Height"]
+					[app displayDialog:layerFill withTitle:"Fill"]
+				}
+				else
+					[doc showMessage:"not a rectangle"]
+			}
+			else
+				[doc showMessage:"what is going on"]
+
+			// If it is a rectangle identify its height and width
+
+			// Otherwise do nothing and wait for the future
+		}
 	}
 
 
 	//[doc showMessage:"v. 0.1"] //esto de momento es manual. Cogerlo del manifest.json en el futuro
 };
+

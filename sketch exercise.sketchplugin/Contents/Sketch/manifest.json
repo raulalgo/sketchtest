@@ -4,7 +4,7 @@
     {
       "script" : "script.cocoascript",
       "handler" : "onRun",
-      "shortcut" : "",
+      "shortcut" : "cmd+l",
       "name" : "sketch exercise",
       "identifier" : "sketch exercise"
     }
